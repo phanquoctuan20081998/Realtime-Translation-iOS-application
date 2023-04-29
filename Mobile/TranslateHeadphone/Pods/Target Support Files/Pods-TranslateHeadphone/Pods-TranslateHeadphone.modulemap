@@ -1,0 +1,6 @@
+framework module Pods_TranslateHeadphone {
+  umbrella header "Pods-TranslateHeadphone-umbrella.h"
+
+  export *
+  module * { export * }
+}

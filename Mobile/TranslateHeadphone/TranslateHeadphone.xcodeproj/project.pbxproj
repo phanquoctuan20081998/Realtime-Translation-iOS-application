@@ -1,0 +1,813 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2B3C412850F60B4DB7F284AC /* Pods_TranslateHeadphone.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88A109CB92A2C6D3AECEEC21 /* Pods_TranslateHeadphone.framework */; };
+		812BC85629F1559400627DD4 /* TranslateHeadphoneApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812BC85529F1559400627DD4 /* TranslateHeadphoneApp.swift */; };
+		812BC85A29F1559400627DD4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 812BC85929F1559400627DD4 /* Assets.xcassets */; };
+		812BC85E29F1559400627DD4 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 812BC85D29F1559400627DD4 /* Preview Assets.xcassets */; };
+		812BC88529F1679D00627DD4 /* Recording.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812BC88429F1679D00627DD4 /* Recording.swift */; };
+		812BC88A29F16C5D00627DD4 /* APIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812BC88929F16C5D00627DD4 /* APIRequest.swift */; };
+		812BC88C29F16D0100627DD4 /* APIModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812BC88B29F16D0100627DD4 /* APIModelProtocol.swift */; };
+		81665E7929F1734600E99EA5 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81665E7829F1734600E99EA5 /* Config.swift */; };
+		816A19C429F4200E00EF355A /* SendAudioRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 816A19C329F4200E00EF355A /* SendAudioRequest.swift */; };
+		816A19C829F4272400EF355A /* audiofile.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 816A19C729F4272400EF355A /* audiofile.mp3 */; };
+		816A19CA29F6B9FC00EF355A /* VoiceMomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 816A19C929F6B9FC00EF355A /* VoiceMomeView.swift */; };
+		816A19CF29F7F71900EF355A /* VoiceMemoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 816A19CE29F7F71900EF355A /* VoiceMemoViewModel.swift */; };
+		816A19D329F7F97900EF355A /* ding.wav in Resources */ = {isa = PBXBuildFile; fileRef = 816A19D229F7F97900EF355A /* ding.wav */; };
+		816A19D729F8118300EF355A /* AppError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 816A19D629F8118300EF355A /* AppError.swift */; };
+		816A19D929F94C6A00EF355A /* AudioRecorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 816A19D829F94C6A00EF355A /* AudioRecorder.swift */; };
+		816A19DB29F94C8500EF355A /* AudioPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 816A19DA29F94C8500EF355A /* AudioPlayer.swift */; };
+		816A19DE29F94D2F00EF355A /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 816A19DD29F94D2F00EF355A /* DateExtension.swift */; };
+		816A19E029F94DE800EF355A /* HelperExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 816A19DF29F94DE800EF355A /* HelperExtension.swift */; };
+		816A19E229F9509000EF355A /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 816A19E129F9509000EF355A /* HomeViewModel.swift */; };
+		816A19E429F9667300EF355A /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 816A19E329F9667300EF355A /* HomeView.swift */; };
+		816A19E929FCAF6D00EF355A /* Algorithms in Frameworks */ = {isa = PBXBuildFile; productRef = 816A19E829FCAF6D00EF355A /* Algorithms */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		812BC86429F1559400627DD4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 812BC84A29F1559400627DD4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 812BC85129F1559400627DD4;
+			remoteInfo = TranslateHeadphone;
+		};
+		812BC86E29F1559400627DD4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 812BC84A29F1559400627DD4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 812BC85129F1559400627DD4;
+			remoteInfo = TranslateHeadphone;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		190EFF0F63C0D9F75E1421B2 /* Pods-TranslateHeadphone.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TranslateHeadphone.release.xcconfig"; path = "Target Support Files/Pods-TranslateHeadphone/Pods-TranslateHeadphone.release.xcconfig"; sourceTree = "<group>"; };
+		812BC85229F1559400627DD4 /* TranslateHeadphone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TranslateHeadphone.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		812BC85529F1559400627DD4 /* TranslateHeadphoneApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslateHeadphoneApp.swift; sourceTree = "<group>"; };
+		812BC85929F1559400627DD4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		812BC85B29F1559400627DD4 /* TranslateHeadphone.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TranslateHeadphone.entitlements; sourceTree = "<group>"; };
+		812BC85D29F1559400627DD4 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		812BC86329F1559400627DD4 /* TranslateHeadphoneTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TranslateHeadphoneTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		812BC86D29F1559400627DD4 /* TranslateHeadphoneUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TranslateHeadphoneUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		812BC88429F1679D00627DD4 /* Recording.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recording.swift; sourceTree = "<group>"; };
+		812BC88929F16C5D00627DD4 /* APIRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequest.swift; sourceTree = "<group>"; };
+		812BC88B29F16D0100627DD4 /* APIModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIModelProtocol.swift; sourceTree = "<group>"; };
+		81665E7829F1734600E99EA5 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
+		816A19C329F4200E00EF355A /* SendAudioRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendAudioRequest.swift; sourceTree = "<group>"; };
+		816A19C729F4272400EF355A /* audiofile.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = audiofile.mp3; sourceTree = "<group>"; };
+		816A19C929F6B9FC00EF355A /* VoiceMomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceMomeView.swift; sourceTree = "<group>"; };
+		816A19CE29F7F71900EF355A /* VoiceMemoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceMemoViewModel.swift; sourceTree = "<group>"; };
+		816A19D229F7F97900EF355A /* ding.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = ding.wav; sourceTree = "<group>"; };
+		816A19D629F8118300EF355A /* AppError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppError.swift; sourceTree = "<group>"; };
+		816A19D829F94C6A00EF355A /* AudioRecorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioRecorder.swift; sourceTree = "<group>"; };
+		816A19DA29F94C8500EF355A /* AudioPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioPlayer.swift; sourceTree = "<group>"; };
+		816A19DD29F94D2F00EF355A /* DateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
+		816A19DF29F94DE800EF355A /* HelperExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelperExtension.swift; sourceTree = "<group>"; };
+		816A19E129F9509000EF355A /* HomeViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		816A19E329F9667300EF355A /* HomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		88A109CB92A2C6D3AECEEC21 /* Pods_TranslateHeadphone.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TranslateHeadphone.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FADDD2E2376CA2BB0F7ED785 /* Pods-TranslateHeadphone.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TranslateHeadphone.debug.xcconfig"; path = "Target Support Files/Pods-TranslateHeadphone/Pods-TranslateHeadphone.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		812BC84F29F1559400627DD4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				816A19E929FCAF6D00EF355A /* Algorithms in Frameworks */,
+				2B3C412850F60B4DB7F284AC /* Pods_TranslateHeadphone.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		812BC86029F1559400627DD4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		812BC86A29F1559400627DD4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0E917C92EA13B5A45054A364 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				FADDD2E2376CA2BB0F7ED785 /* Pods-TranslateHeadphone.debug.xcconfig */,
+				190EFF0F63C0D9F75E1421B2 /* Pods-TranslateHeadphone.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		25831CD62F330ED3ED1BC983 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				88A109CB92A2C6D3AECEEC21 /* Pods_TranslateHeadphone.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		812BC84929F1559400627DD4 = {
+			isa = PBXGroup;
+			children = (
+				812BC85429F1559400627DD4 /* TranslateHeadphone */,
+				812BC85329F1559400627DD4 /* Products */,
+				0E917C92EA13B5A45054A364 /* Pods */,
+				25831CD62F330ED3ED1BC983 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		812BC85329F1559400627DD4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				812BC85229F1559400627DD4 /* TranslateHeadphone.app */,
+				812BC86329F1559400627DD4 /* TranslateHeadphoneTests.xctest */,
+				812BC86D29F1559400627DD4 /* TranslateHeadphoneUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		812BC85429F1559400627DD4 /* TranslateHeadphone */ = {
+			isa = PBXGroup;
+			children = (
+				812BC85B29F1559400627DD4 /* TranslateHeadphone.entitlements */,
+				816A19DC29F94D1900EF355A /* Extension */,
+				812BC88329F1560400627DD4 /* App */,
+				812BC88829F16B5100627DD4 /* Service */,
+				812BC88229F155FC00627DD4 /* Model */,
+				812BC88129F155EF00627DD4 /* ViewModel */,
+				812BC88029F155CD00627DD4 /* View */,
+				81665E7729F1731A00E99EA5 /* Constant */,
+				812BC85C29F1559400627DD4 /* Preview Content */,
+			);
+			path = TranslateHeadphone;
+			sourceTree = "<group>";
+		};
+		812BC85C29F1559400627DD4 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				816A19D229F7F97900EF355A /* ding.wav */,
+				816A19C729F4272400EF355A /* audiofile.mp3 */,
+				812BC85929F1559400627DD4 /* Assets.xcassets */,
+				812BC85D29F1559400627DD4 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		812BC88029F155CD00627DD4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				816A19E329F9667300EF355A /* HomeView.swift */,
+				816A19C929F6B9FC00EF355A /* VoiceMomeView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		812BC88129F155EF00627DD4 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				816A19E129F9509000EF355A /* HomeViewModel.swift */,
+				816A19CE29F7F71900EF355A /* VoiceMemoViewModel.swift */,
+				816A19D829F94C6A00EF355A /* AudioRecorder.swift */,
+				816A19DA29F94C8500EF355A /* AudioPlayer.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		812BC88229F155FC00627DD4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				812BC88429F1679D00627DD4 /* Recording.swift */,
+				812BC88B29F16D0100627DD4 /* APIModelProtocol.swift */,
+				816A19D629F8118300EF355A /* AppError.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		812BC88329F1560400627DD4 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				812BC85529F1559400627DD4 /* TranslateHeadphoneApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		812BC88829F16B5100627DD4 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				812BC88929F16C5D00627DD4 /* APIRequest.swift */,
+				816A19C329F4200E00EF355A /* SendAudioRequest.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		81665E7729F1731A00E99EA5 /* Constant */ = {
+			isa = PBXGroup;
+			children = (
+				81665E7829F1734600E99EA5 /* Config.swift */,
+			);
+			path = Constant;
+			sourceTree = "<group>";
+		};
+		816A19DC29F94D1900EF355A /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				816A19DD29F94D2F00EF355A /* DateExtension.swift */,
+				816A19DF29F94DE800EF355A /* HelperExtension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		812BC85129F1559400627DD4 /* TranslateHeadphone */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 812BC87729F1559400627DD4 /* Build configuration list for PBXNativeTarget "TranslateHeadphone" */;
+			buildPhases = (
+				0EA6E7A30ABF42B0328F2130 /* [CP] Check Pods Manifest.lock */,
+				812BC84E29F1559400627DD4 /* Sources */,
+				812BC84F29F1559400627DD4 /* Frameworks */,
+				812BC85029F1559400627DD4 /* Resources */,
+				1DA2E084FFBC14824AB361D2 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TranslateHeadphone;
+			packageProductDependencies = (
+				816A19E829FCAF6D00EF355A /* Algorithms */,
+			);
+			productName = TranslateHeadphone;
+			productReference = 812BC85229F1559400627DD4 /* TranslateHeadphone.app */;
+			productType = "com.apple.product-type.application";
+		};
+		812BC86229F1559400627DD4 /* TranslateHeadphoneTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 812BC87A29F1559400627DD4 /* Build configuration list for PBXNativeTarget "TranslateHeadphoneTests" */;
+			buildPhases = (
+				812BC85F29F1559400627DD4 /* Sources */,
+				812BC86029F1559400627DD4 /* Frameworks */,
+				812BC86129F1559400627DD4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				812BC86529F1559400627DD4 /* PBXTargetDependency */,
+			);
+			name = TranslateHeadphoneTests;
+			productName = TranslateHeadphoneTests;
+			productReference = 812BC86329F1559400627DD4 /* TranslateHeadphoneTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		812BC86C29F1559400627DD4 /* TranslateHeadphoneUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 812BC87D29F1559400627DD4 /* Build configuration list for PBXNativeTarget "TranslateHeadphoneUITests" */;
+			buildPhases = (
+				812BC86929F1559400627DD4 /* Sources */,
+				812BC86A29F1559400627DD4 /* Frameworks */,
+				812BC86B29F1559400627DD4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				812BC86F29F1559400627DD4 /* PBXTargetDependency */,
+			);
+			name = TranslateHeadphoneUITests;
+			productName = TranslateHeadphoneUITests;
+			productReference = 812BC86D29F1559400627DD4 /* TranslateHeadphoneUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		812BC84A29F1559400627DD4 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1430;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					812BC85129F1559400627DD4 = {
+						CreatedOnToolsVersion = 14.3;
+					};
+					812BC86229F1559400627DD4 = {
+						CreatedOnToolsVersion = 14.3;
+						TestTargetID = 812BC85129F1559400627DD4;
+					};
+					812BC86C29F1559400627DD4 = {
+						CreatedOnToolsVersion = 14.3;
+						TestTargetID = 812BC85129F1559400627DD4;
+					};
+				};
+			};
+			buildConfigurationList = 812BC84D29F1559400627DD4 /* Build configuration list for PBXProject "TranslateHeadphone" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 812BC84929F1559400627DD4;
+			packageReferences = (
+				816A19E729FCAF6D00EF355A /* XCRemoteSwiftPackageReference "swift-algorithms" */,
+				816A19EA29FCB0D800EF355A /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
+			productRefGroup = 812BC85329F1559400627DD4 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				812BC85129F1559400627DD4 /* TranslateHeadphone */,
+				812BC86229F1559400627DD4 /* TranslateHeadphoneTests */,
+				812BC86C29F1559400627DD4 /* TranslateHeadphoneUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		812BC85029F1559400627DD4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				816A19C829F4272400EF355A /* audiofile.mp3 in Resources */,
+				812BC85E29F1559400627DD4 /* Preview Assets.xcassets in Resources */,
+				816A19D329F7F97900EF355A /* ding.wav in Resources */,
+				812BC85A29F1559400627DD4 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		812BC86129F1559400627DD4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		812BC86B29F1559400627DD4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0EA6E7A30ABF42B0328F2130 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TranslateHeadphone-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		1DA2E084FFBC14824AB361D2 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TranslateHeadphone/Pods-TranslateHeadphone-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TranslateHeadphone/Pods-TranslateHeadphone-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TranslateHeadphone/Pods-TranslateHeadphone-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		812BC84E29F1559400627DD4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				812BC88529F1679D00627DD4 /* Recording.swift in Sources */,
+				816A19DE29F94D2F00EF355A /* DateExtension.swift in Sources */,
+				816A19E029F94DE800EF355A /* HelperExtension.swift in Sources */,
+				816A19E429F9667300EF355A /* HomeView.swift in Sources */,
+				816A19CF29F7F71900EF355A /* VoiceMemoViewModel.swift in Sources */,
+				812BC85629F1559400627DD4 /* TranslateHeadphoneApp.swift in Sources */,
+				81665E7929F1734600E99EA5 /* Config.swift in Sources */,
+				816A19CA29F6B9FC00EF355A /* VoiceMomeView.swift in Sources */,
+				816A19D929F94C6A00EF355A /* AudioRecorder.swift in Sources */,
+				812BC88A29F16C5D00627DD4 /* APIRequest.swift in Sources */,
+				816A19C429F4200E00EF355A /* SendAudioRequest.swift in Sources */,
+				816A19D729F8118300EF355A /* AppError.swift in Sources */,
+				812BC88C29F16D0100627DD4 /* APIModelProtocol.swift in Sources */,
+				816A19E229F9509000EF355A /* HomeViewModel.swift in Sources */,
+				816A19DB29F94C8500EF355A /* AudioPlayer.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		812BC85F29F1559400627DD4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		812BC86929F1559400627DD4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		812BC86529F1559400627DD4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 812BC85129F1559400627DD4 /* TranslateHeadphone */;
+			targetProxy = 812BC86429F1559400627DD4 /* PBXContainerItemProxy */;
+		};
+		812BC86F29F1559400627DD4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 812BC85129F1559400627DD4 /* TranslateHeadphone */;
+			targetProxy = 812BC86E29F1559400627DD4 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		812BC87529F1559400627DD4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		812BC87629F1559400627DD4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		812BC87829F1559400627DD4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FADDD2E2376CA2BB0F7ED785 /* Pods-TranslateHeadphone.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = TranslateHeadphone/TranslateHeadphone.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"TranslateHeadphone/Preview Content\"";
+				DEVELOPMENT_TEAM = U552P5B227;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Access the microphone to record your voice only for translation purpose";
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 13.3;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = translateheadphone.TranslateHeadphone;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		812BC87929F1559400627DD4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 190EFF0F63C0D9F75E1421B2 /* Pods-TranslateHeadphone.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = TranslateHeadphone/TranslateHeadphone.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"TranslateHeadphone/Preview Content\"";
+				DEVELOPMENT_TEAM = U552P5B227;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Access the microphone to record your voice only for translation purpose";
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 13.3;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = translateheadphone.TranslateHeadphone;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		812BC87B29F1559400627DD4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = U552P5B227;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MACOSX_DEPLOYMENT_TARGET = 13.3;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = translateheadphone.TranslateHeadphoneTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TranslateHeadphone.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/TranslateHeadphone";
+			};
+			name = Debug;
+		};
+		812BC87C29F1559400627DD4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = U552P5B227;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MACOSX_DEPLOYMENT_TARGET = 13.3;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = translateheadphone.TranslateHeadphoneTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TranslateHeadphone.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/TranslateHeadphone";
+			};
+			name = Release;
+		};
+		812BC87E29F1559400627DD4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = U552P5B227;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MACOSX_DEPLOYMENT_TARGET = 13.3;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = translateheadphone.TranslateHeadphoneUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = TranslateHeadphone;
+			};
+			name = Debug;
+		};
+		812BC87F29F1559400627DD4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = U552P5B227;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MACOSX_DEPLOYMENT_TARGET = 13.3;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = translateheadphone.TranslateHeadphoneUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = TranslateHeadphone;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		812BC84D29F1559400627DD4 /* Build configuration list for PBXProject "TranslateHeadphone" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				812BC87529F1559400627DD4 /* Debug */,
+				812BC87629F1559400627DD4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		812BC87729F1559400627DD4 /* Build configuration list for PBXNativeTarget "TranslateHeadphone" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				812BC87829F1559400627DD4 /* Debug */,
+				812BC87929F1559400627DD4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		812BC87A29F1559400627DD4 /* Build configuration list for PBXNativeTarget "TranslateHeadphoneTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				812BC87B29F1559400627DD4 /* Debug */,
+				812BC87C29F1559400627DD4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		812BC87D29F1559400627DD4 /* Build configuration list for PBXNativeTarget "TranslateHeadphoneUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				812BC87E29F1559400627DD4 /* Debug */,
+				812BC87F29F1559400627DD4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		816A19E729FCAF6D00EF355A /* XCRemoteSwiftPackageReference "swift-algorithms" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apple/swift-algorithms.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+		816A19EA29FCB0D800EF355A /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		816A19E829FCAF6D00EF355A /* Algorithms */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 816A19E729FCAF6D00EF355A /* XCRemoteSwiftPackageReference "swift-algorithms" */;
+			productName = Algorithms;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 812BC84A29F1559400627DD4 /* Project object */;
+}
