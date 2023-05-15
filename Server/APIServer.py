@@ -5,7 +5,7 @@ from Convert import convertm4awav
 import time
 import os
 
-os.environ["GCLOUD_PROJECT"] = "verdant-bulwark-384213"
+os.environ["GCLOUD_PROJECT"] = "smartheadphone"
 
 app = Flask(__name__)
 
@@ -25,10 +25,10 @@ def upload_file():
     convertm4awav(m4a_file, wav_file)
 
     # Save audio file to cloud server 
-    GCP.upload_blob("translate_headphone", wav_file, f"audio-files/{wav_file}")
+    GCP.upload_blob("translate_headphone_demo", wav_file, f"audio-files/{wav_file}")
 
     # Speech-to-Text
-    texts = GCP.transcribe_file_from_gs(f"gs://translate_headphone/audio-files/{wav_file}")
+    texts = GCP.transcribe_file_from_gs(f"gs://translate_headphone_demo/audio-files/{wav_file}")
 
     # Text-to-Text
     translated_texts = []
@@ -38,14 +38,14 @@ def upload_file():
     # Text-to-Speech
     speech_name = []
     for i in range(len(translated_texts)):
-        speech_name.append(f"https://storage.googleapis.com/translate_headphone/output-files/output{i}-{timestr}.mp3")
+        speech_name.append(f"https://storage.googleapis.com/translate_headphone_demo/output-files/output{i}-{timestr}.mp3")
         GCP.synthesize_text(translated_texts[i][0], f"Output/output{i}-{timestr}.mp3")
-        GCP.upload_blob("translate_headphone", f"Output/output{i}-{timestr}.mp3", f"output-files/output{i}-{timestr}.mp3")
+        GCP.upload_blob("translate_headphone_demo", f"Output/output{i}-{timestr}.mp3", f"output-files/output{i}-{timestr}.mp3")
 
     response = speech_name
 
     return response
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=4027)
+    app.run(host='0.0.0.0', port=4038)
 

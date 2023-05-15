@@ -11,7 +11,7 @@ import SwiftUI
 
 class SendAudioService {
     func uploadAudio(audioData: Data, name: String, completionHandler: @escaping (Data?, Error?) -> Void) {
-        let url = URL(string: "http://192.168.11.14:4026/upload")!
+        let url = URL(string: "http://10.192.42.248:4038/upload")!
         var request = URLRequest(url: url)
         request.httpMethod = "POST"
         request.httpBody = audioData

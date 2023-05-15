@@ -31,7 +31,7 @@ def upload_blob(bucket_name, source_file_name, destination_blob_name):
 
 
 # Translate text-to-text
-def translate_text(text="YOUR_TEXT_TO_TRANSLATE", project_id="verdant-bulwark-384213"):
+def translate_text(text="YOUR_TEXT_TO_TRANSLATE", project_id="smartheadphone"):
     """Translating Text."""
     from google.cloud import translate
 
