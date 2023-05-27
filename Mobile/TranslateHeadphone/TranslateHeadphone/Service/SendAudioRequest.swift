@@ -10,9 +10,14 @@ import AVKit
 import SwiftUI
 
 class SendAudioService {
-    func uploadAudio(audioData: Data, name: String, completionHandler: @escaping (Data?, Error?) -> Void) {
-        let url = URL(string: "http://10.192.42.248:4038/upload")!
-        var request = URLRequest(url: url)
+    func uploadAudio(audioData: Data, parameters: [String: String], completionHandler: @escaping (Data?, Error?) -> Void) {
+//        let url = URL(string: "http://10.192.42.248:4038/upload")!
+        var components = URLComponents(string: "http://192.168.11.4:4048/upload")!
+        components.queryItems = parameters.map { (key, value) in
+                URLQueryItem(name: key, value: value)
+            }
+        
+        var request = URLRequest(url: components.url!)
         request.httpMethod = "POST"
         request.httpBody = audioData
         

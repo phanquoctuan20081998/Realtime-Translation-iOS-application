@@ -31,9 +31,12 @@ def upload_blob(bucket_name, source_file_name, destination_blob_name):
 
 
 # Translate text-to-text
-def translate_text(text="YOUR_TEXT_TO_TRANSLATE", project_id="smartheadphone"):
+def translate_text(text="YOUR_TEXT_TO_TRANSLATE", project_id="smartheadphone", lang="vn"):
     """Translating Text."""
     from google.cloud import translate
+
+    source_language_code = "vi-VN" if lang == "vn" else "ja-JP"
+    target_language_code = "ja" if lang == "vn" else "vi"
 
     rs = []
 
@@ -51,8 +54,8 @@ def translate_text(text="YOUR_TEXT_TO_TRANSLATE", project_id="smartheadphone"):
             "parent": parent,
             "contents": [text],
             "mime_type": "text/plain",  # mime types: text/plain, text/html
-            "source_language_code": "vi-VN",
-            "target_language_code": "ja",
+            "source_language_code": source_language_code,
+            "target_language_code": target_language_code,
         }
     )
 
@@ -69,9 +72,12 @@ def translate_text(text="YOUR_TEXT_TO_TRANSLATE", project_id="smartheadphone"):
 
 
 # Generate Text-to-Speech
-def synthesize_text(text, output):
+def synthesize_text(text, output, lang):
     """Synthesizes speech from the input string of text."""
     from google.cloud import texttospeech
+
+    lang_code = "ja-JP" if lang == "vn" else "vi-VN"
+    name = "ja-JP-Neural2-B" if lang == "vn" else "vi-VN-Standard-C"
 
     client = texttospeech.TextToSpeechClient()
 
@@ -80,8 +86,8 @@ def synthesize_text(text, output):
     # Note: the voice can also be specified by name.
     # Names of voices can be retrieved with client.list_voices().
     voice = texttospeech.VoiceSelectionParams(
-        language_code="ja-JP",
-        name="ja-JP-Neural2-B",
+        language_code=lang_code,
+        name=name,
         ssml_gender=texttospeech.SsmlVoiceGender.FEMALE,
     )
 
@@ -101,9 +107,11 @@ def synthesize_text(text, output):
 
 
 # Generate Speech-to-Text
-def transcribe_file(speech_file):
+def transcribe_file(speech_file, lang):
     """Transcribe the given audio file asynchronously."""
     from google.cloud import speech
+
+    lang_code = lang_code_convert(lang)
 
     rs = []
 
@@ -121,7 +129,7 @@ def transcribe_file(speech_file):
     config = speech.RecognitionConfig(
         encoding=speech.RecognitionConfig.AudioEncoding.LINEAR16,
         sample_rate_hertz=12000,
-        language_code="vi-VN",
+        language_code=lang_code,
     )
 
 
@@ -135,16 +143,17 @@ def transcribe_file(speech_file):
     for result in response.results:
         # The first alternative is the most likely one for this portion.
         print("Transcript: {}".format(result.alternatives[0].transcript))
-        print("Confidence: {}".format(result.alternatives[0].confidence))
 
         rs.append(result.alternatives[0].transcript)
 
 
 
-def transcribe_file_from_gs(gcs_uri):
+def transcribe_file_from_gs(gcs_uri, lang):
 
     """Asynchronously transcribes the audio file specified by the gcs_uri."""
     from google.cloud import speech
+
+    lang_code = lang_code_convert(lang)
 
     rs = []
     client = speech.SpeechClient()
@@ -153,7 +162,7 @@ def transcribe_file_from_gs(gcs_uri):
     config = speech.RecognitionConfig(
         encoding=speech.RecognitionConfig.AudioEncoding.LINEAR16,
         sample_rate_hertz=12000,
-        language_code="vi-VN",
+        language_code=lang_code,
     )
 
     operation = client.long_running_recognize(config=config, audio=audio)
@@ -200,5 +209,13 @@ def list_voices():
         # Display the natural sample rate hertz for this voice. Example: 24000
         print(f"Natural Sample Rate Hertz: {voice.natural_sample_rate_hertz}\n")
 
-# list_voices()
+def lang_code_convert(lang):
+    if lang == "vn":
+        lang_code = "vi-VN"
+    else:
+        lang_code = "ja-JP"
+
+    return lang_code
+
+list_voices()
 

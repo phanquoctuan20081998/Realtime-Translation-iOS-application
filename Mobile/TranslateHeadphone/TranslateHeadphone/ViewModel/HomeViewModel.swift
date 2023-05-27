@@ -12,6 +12,7 @@ class HomeViewModel: ObservableObject {
     @Published var audioName = ""
     @Published var respondedAudio : [String] = []
     @Published var isGetResponse = false
+    @Published var lang = ""
     
     private var sendAudioService = SendAudioService()
     
@@ -20,11 +21,12 @@ class HomeViewModel: ObservableObject {
         self.audioName = name
     }
     func sendAudio() {
-        sendAudioService.uploadAudio(audioData: audioData, name: audioName) { data, error in
+        sendAudioService.uploadAudio(audioData: audioData, parameters: ["lang": self.lang] ) { data, error in
             DispatchQueue.main.async {
                 let response = self.dataToStringArray(data: data ?? Data())
                 self.respondedAudio = response
                 self.isGetResponse = true
+                print(self.lang)
             }
         }
     }

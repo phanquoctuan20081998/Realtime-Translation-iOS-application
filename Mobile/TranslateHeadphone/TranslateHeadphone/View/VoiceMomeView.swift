@@ -6,10 +6,16 @@ struct VoiceMemoView: View {
     @ObservedObject var audioPlayer = AudioPlayer()
     @StateObject var homeViewModel = HomeViewModel()
     
+    @State var isVNChoose = false
+    
     var body: some View {
         VStack {
             
-//            RecordingsList(audioRecorder: audioRecorder)
+            //            RecordingsList(audioRecorder: audioRecorder)
+            
+            Spacer()
+            
+            LangButton
             
             if audioRecorder.isDoneRecording {
                 if audioPlayer.isPlaying == false {
@@ -32,10 +38,6 @@ struct VoiceMemoView: View {
             }
             
             Spacer()
-            
-//            if homeViewModel.isGetResponse {
-//                AudioPlayerView(url: homeViewModel.respondedAudio[0])
-//            }
             
             if audioRecorder.recording == false {
                 Button(action: {self.audioRecorder.startRecording()}) {
@@ -69,10 +71,44 @@ struct VoiceMemoView: View {
         }
         .navigationBarTitle("Voice Recorder")
         .sheet(isPresented: $homeViewModel.isGetResponse) {
-            let _ = print(homeViewModel.respondedAudio[0])
-//            AudioPlayerView(url: "https://storage.googleapis.com/translate_headphone/output-files/output0-20230429-204704.mp3")
             AudioPlayerView(url: homeViewModel.respondedAudio[0])
         }
+    }
+    
+    var LangButton: some View {
+        HStack {
+            VStack(spacing: 0) {
+                Button {
+                    homeViewModel.lang = "jp"
+                    isVNChoose = false
+                } label: {
+                    Text("🇯🇵")
+                        .font(.system(size: 80))
+                }
+                
+                Circle()
+                    .frame(width: 10, height: 10)
+                    .opacity(isVNChoose ? 0 : 5)
+                
+            }
+            
+            Spacer()
+            
+            VStack(spacing: 0) {
+                Button {
+                    homeViewModel.lang = "vn"
+                    isVNChoose = true
+                } label: {
+                    Text("🇻🇳")
+                        .font(.system(size: 80))
+                }
+                
+                Circle()
+                    .frame(width: 10, height: 10)
+                    .opacity(isVNChoose ? 5 : 0)
+            }
+            
+        }.padding(80)
     }
 }
 
@@ -93,7 +129,7 @@ struct RecordingsList: View {
             ForEach(audioRecorder.recordings, id: \.createdAt) { recording in
                 RecordingRow(audioURL: recording.fileURL)
             }
-        .onDelete(perform: delete)
+            .onDelete(perform: delete)
         }
     }
     
