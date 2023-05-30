@@ -15,13 +15,14 @@ struct AudioPlayerView: View {
     
     var body: some View {
         Button(action: togglePlay) {
-            Image(systemName: isPlaying ? "pause.circle.fill" : "play.circle.fill")
-                .resizable()
-                .aspectRatio(contentMode: .fit)
-                .frame(width: 50, height: 50)
+//            Image(systemName: isPlaying ? "pause.circle.fill" : "play.circle.fill")
+//                .resizable()
+//                .aspectRatio(contentMode: .fit)
+//                .frame(width: 50, height: 50)
         }
         .onAppear {
             configureAudioSession()
+            togglePlay()
         }
     }
     
@@ -32,7 +33,6 @@ struct AudioPlayerView: View {
             var urlString = url.replacingOccurrences(of: "\"", with: "")
             urlString = urlString.replacingOccurrences(of: "[", with: "")
             urlString = String(urlString.replacingOccurrences(of: "]", with: ""))
-            print(urlString)
             
             guard let url = URL(string: urlString) else {return}
             player = AVPlayer(url: url)

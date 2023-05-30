@@ -58,6 +58,7 @@ struct VoiceMemoView: View {
                     
                     homeViewModel.loadData(data: audioData ?? Data(), name: audioName)
                     homeViewModel.sendAudio()
+                    homeViewModel.isGetResponse = false
                 } label: {
                     Image(systemName: "stop.fill")
                         .resizable()
@@ -68,11 +69,15 @@ struct VoiceMemoView: View {
                         .padding(.bottom, 40)
                 }
             }
+            
+            if homeViewModel.isGetResponse == true {
+                AudioPlayerView(url: homeViewModel.respondedAudio[0])
+            }
         }
         .navigationBarTitle("Voice Recorder")
-        .sheet(isPresented: $homeViewModel.isGetResponse) {
-            AudioPlayerView(url: homeViewModel.respondedAudio[0])
-        }
+//        .sheet(isPresented: $homeViewModel.isGetResponse) {
+//            AudioPlayerView(url: homeViewModel.respondedAudio[0])
+//        }
     }
     
     var LangButton: some View {
