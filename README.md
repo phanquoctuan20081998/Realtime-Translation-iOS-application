@@ -1,5 +1,7 @@
-# Smart Headphone
-This is a demo iOS application of realtime voice translation application using GCP.
+# Realtime transaltion
+This is a demo iOS application of realtime voice translation (Vietnamese 🇻🇳 and Japanese 🇯🇵) application using GCP.
+
+<img src="https://github.com/phanquoctuan20081998/SmartHeadphone/assets/32617517/135b2a39-5023-40c1-a2ce-440dd68ed74c" alt="IMG_6436" width="300">
 
 ### 1. Feature
 Translate Vietnamese to Japanese and backward
@@ -19,7 +21,7 @@ Step 3: We convert back the translated text to audio using Google's text-to-spee
   
 ## 4. Project setup
 
-BACKEND SETUP
+BACKEND SETUP:
 
 1. Install the required tools: 
     * Python 3.9, 3.10, or 3.11
@@ -35,6 +37,7 @@ BACKEND SETUP
 5. Run `python Server/APIServer.py`
 
 FRONTEND NOTE:
+
 Before running, make sure you change your IP adress and port in `Service/SendAudioRequest.swift` match with your backend server.
 
 
