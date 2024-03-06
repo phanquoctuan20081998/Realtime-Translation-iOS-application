@@ -19,7 +19,7 @@ Step 3: We convert back the translated text to audio using Google's text-to-spee
 
 * **Google cloud subscription:** You need to be able to access speech-to-text, translation and text-to-speech services on GCP.
   
-## 4. Project setup
+### 4. Project setup
 
 BACKEND SETUP:
 
